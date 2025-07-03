@@ -29,15 +29,18 @@ const About: React.FC = () => {
     <div className="home-section">
       <div className="work-experience">
         <h2>Work Experience</h2>
-        <div className="experience-list">
+        <div className="experience-list single-box"> {/* Added a class for potential styling */}
           {workExperience.map((job, index) => (
-            <div key={index} className="experience-item">
-              <div className="experience-header">
-                <h3>{job.company}</h3>
-                <span className="period">{job.period}</span>
+            <React.Fragment key={index}> {/* Using React.Fragment to avoid extra divs if not needed for styling */}
+              <div className="experience-item"> {/* Retaining this class for individual item styling */}
+                <div className="experience-header">
+                  <h3>{job.company}</h3>
+                  <span className="period">{job.period}</span>
+                </div>
+                <p>{job.description}</p>
               </div>
-              <p>{job.description}</p>
-            </div>
+              {index < workExperience.length - 1 && <hr className="experience-separator" />} {/* Optional: Add a separator */}
+            </React.Fragment>
           ))}
         </div>
       </div>
