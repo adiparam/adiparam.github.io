@@ -14,12 +14,12 @@ const Footer: React.FC = () => {
     {
       name: 'LinkedIn',
       url: 'https://linkedin.com/in/adiparam',
-      icon: '/resources/icons8-linkedin-48.png'
+      icon: liLogo
     },
     {
       name: 'GitHub',
       url: 'https://github.com/adiparam',
-      icon: '/resources/icons8-github-48.png'
+      icon: ghLogo
     },
     {
       name: 'Bluesky',
