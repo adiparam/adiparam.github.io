@@ -1,0 +1,38 @@
+/* Link Styles */
+.hero a {
+  color: #64b5f6;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.hero a:visited {
+  color: #90caf9;
+}
+
+.hero a:hover {
+  color: #e3f2fd;
+  text-shadow: 0 0 8px rgba(100, 181, 246, 0.5);
+}
+
+.hero a:focus {
+  outline: 2px solid rgba(100, 181, 246, 0.5);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* Optional underline effect on hover */
+.hero a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #64b5f6, #90caf9);
+  transition: width 0.3s ease;
+}
+
+.hero a:hover::after {
+  width: 100%;
+}
