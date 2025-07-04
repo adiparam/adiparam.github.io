@@ -1,4 +1,5 @@
 import React from 'react'
+import './About.css'
 
 interface WorkExperience {
   company: string
@@ -27,12 +28,12 @@ const About: React.FC = () => {
 
   return (
     <div className="home-section">
-      <div className="work-experience">
+      <div className="about-section">
         <h2>Work Experience</h2>
-        <div className="experience-list single-box"> {/* Added a class for potential styling */}
+        <div className="experience-list single-box">
           {workExperience.map((job, index) => (
-            <React.Fragment key={index}> {/* Using React.Fragment to avoid extra divs if not needed for styling */}
-              <div className="experience-item"> {/* Retaining this class for individual item styling */}
+            <React.Fragment key={index}>
+              <div className="experience-item">
                 <div className="experience-header">
                   <h3>{job.company}</h3>
                   <span className="period">{job.period}</span>
@@ -43,6 +44,9 @@ const About: React.FC = () => {
             </React.Fragment>
           ))}
         </div>
+      </div>
+      <div className="about-section">
+        <h2>Publications</h2>
       </div>
     </div>
   )

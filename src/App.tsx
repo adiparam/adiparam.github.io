@@ -17,24 +17,9 @@ const App: React.FC = () => {
               <h2>Aditya Paramatmuni</h2>
             </div>
             <div className="nav-menu">
-              <Link
-                to="/"
-                className="nav-item"
-              >
-                Home
-              </Link>
-              <Link
-                to="/blog"
-                className="nav-item"
-              >
-                Blog
-              </Link>
-              <Link
-                to="/about"
-                className="nav-item"
-              >
-                About
-              </Link>
+              <Link to="/" className="nav-item">Home</Link>
+              <Link to="/blog" className="nav-item">Blog</Link>
+              <Link to="/about" className="nav-item">About</Link>
             </div>
           </div>
         </nav>
