@@ -1,0 +1,57 @@
+==================================================================
+https://keybase.io/aytida
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://adityaparamatmuni.com
+  * I am aytida (https://keybase.io/aytida) on keybase.
+  * I have a public key ASDJWPxrF9oS0s6oEyp8j7c7IVonOb8ajUtAbb5HMROURQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120704700d0bfa5ae2805b60dfb9b9cb943f8db7b13d7fb8bd889e03e5ee6155dfb0a",
+      "host": "keybase.io",
+      "kid": "0120c958fc6b17da12d2cea8132a7c8fb73b215a2739bf1a8d4b406dbe47311394450a",
+      "uid": "af02ed7bc87a4867a4f0fadb10ca3c19",
+      "username": "aytida"
+    },
+    "merkle_root": {
+      "ctime": 1643392784,
+      "hash": "00fb985a17a9cb4698f71c66427a892ed1947083c0aee68242e00c77fa41524ae252cd9fd347c3f02d2241fb7cc3cc998ee5e8594d0e2ace5f4eb88809e1204a",
+      "hash_meta": "cc11321731299eb7dc69a514afbbba7c202f2a3a184926382d5a71701793a5cf",
+      "seqno": 21745544
+    },
+    "service": {
+      "entropy": "9a5JrWscRI7y7y0kT02glCJR",
+      "hostname": "adityaparamatmuni.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.9.0"
+  },
+  "ctime": 1643392808,
+  "expire_in": 504576000,
+  "prev": "2d1cb3c0b65d92c3110ee2563acf4693aa832641151a392f5e70350d56f05fac",
+  "seqno": 26,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgyVj8axfaEtLOqBMqfI+3OyFaJzm/Go1LQG2+RzETlEUKp3BheWxvYWTESpcCGsQgLRyzwLZdksMRDuJWOs9Gk6qDJkEVGjkvXnA1DVbwX6zEIGJsabwdzPdpXuJQtkF5pooOz7uNwlZHfR3GIXPWE9RHAgHCo3NpZ8RAfjifut9QY4zuXctZXFriUrbYr0ENB0X1GY5GlJduaY8ZC8//rfgroacCRVot/Ldr9vKvYsI6q1a8QA7Xdw8NCKhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIBq/DsBhtI2PPIaUmIWftodsQ/xXyvSy2VKH1wxtV9vDo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/aytida
+
+==================================================================
+
