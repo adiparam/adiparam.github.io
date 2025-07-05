@@ -6,10 +6,14 @@
 
 /* Navigation Bar */
 .navbar {
-  background: rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, rgba(30, 60, 114, 0.8) 0%, rgba(42, 82, 152, 0.8) 50%, rgba(0, 0, 0, 0.8) 100%),
+              url('/resources/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 1rem 0;
+  padding: 3rem 0;
   position: sticky;
   top: 0;
   z-index: 100;
