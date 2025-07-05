@@ -1,7 +1,4 @@
 import React from 'react'
-import liLogo from '../resources/icons8-linkedin-48.png'
-import ghLogo from '../resources/icons8-github-48.png'
-import blueskyLogo from '../resources/icons8-bluesky-48.png'
 
 interface SocialLink {
   name: string
@@ -14,17 +11,17 @@ const Footer: React.FC = () => {
     {
       name: 'LinkedIn',
       url: 'https://linkedin.com/in/adiparam',
-      icon: liLogo
+      icon: 'resources/icons8-linkedin-48.png'
     },
     {
       name: 'GitHub',
       url: 'https://github.com/adiparam',
-      icon: ghLogo
+      icon: 'resources/icons8-github-48.png'
     },
     {
       name: 'Bluesky',
       url: 'https://bsky.app/profile/adityaparamatmuni.com',
-      icon: blueskyLogo
+      icon: 'resources/icons8-bluesky-48.png'
     }
   ]
 

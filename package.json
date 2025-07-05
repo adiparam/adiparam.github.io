@@ -11,7 +11,7 @@
     "lint": "eslint . --ext js,jsx,ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "echo 'adityaparamatmuni.com' > ./dist/CNAME && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^18.2.0",
