@@ -4,11 +4,13 @@ import Profile from './Profile'
 import Blog from './Blog'
 import About from './About'
 import Footer from './Footer'
+import AnalyticsTracker from './AnalyticsTracker' // Import the tracker
 import './App.css'
 
 const App: React.FC = () => {
   return (
     <Router>
+      <AnalyticsTracker /> {/* Add the tracker here */}
       <div className="app">
         {/* Navigation Bar */}
         <nav className="navbar">
