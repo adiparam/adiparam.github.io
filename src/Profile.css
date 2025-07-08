@@ -1,3 +1,88 @@
+/* Profile Section Styles */
+.profile-container {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.profile-image-container {
+  flex-shrink: 0;
+}
+
+.profile-image {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #64b5f6;
+  box-shadow: 0 8px 32px rgba(100, 181, 246, 0.3);
+  transition: all 0.3s ease;
+}
+
+.profile-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 40px rgba(100, 181, 246, 0.5);
+  border-color: #90caf9;
+}
+
+.profile-content {
+  flex: 1;
+  text-align: left;
+}
+
+.profile-content h1 {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+}
+
+.profile-content p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-container {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+  
+  .profile-content {
+    text-align: center;
+  }
+  
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .profile-content h1 {
+    font-size: 2rem;
+  }
+  
+  .profile-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    gap: 1.5rem;
+  }
+  
+  .profile-image {
+    width: 120px;
+    height: 120px;
+  }
+  
+  .profile-content h1 {
+    font-size: 1.8rem;
+  }
+}
+
 /* Link Styles */
 .hero a {
   color: #64b5f6;
