@@ -8,6 +8,7 @@ interface Post {
   title: string;
   date: string;
   summary: string;
+  bannerHeader?: string;
 }
 
 const formatDate = (dateString: string): string => {
@@ -32,7 +33,7 @@ const Blog: React.FC = () => {
 
   useEffect(() => {
     const fetchPosts = async () => {
-      const postModules = import.meta.glob('../blogcontent/*.md', { as: 'raw' });
+      const postModules = import.meta.glob('../blogcontent/*.md', { query: '?raw', import: 'default' });
       const postPromises = Object.entries(postModules).map(async ([path, resolver]) => {
         const rawContent = await resolver();
         const { data } = matter(rawContent);

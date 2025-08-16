@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import matter from 'gray-matter';
+import './Blog.css';
 
 const formatDate = (dateString: string): string => {
   const date = new Date(dateString);
@@ -22,14 +23,14 @@ const formatDate = (dateString: string): string => {
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [post, setPost] = useState<{ content: string; title: string; date: string } | null>(null);
+  const [post, setPost] = useState<{ content: string; title: string; date: string; bannerHeader?: string } | null>(null);
 
   useEffect(() => {
     const fetchPost = async () => {
       try {
         const postFile = await import(`../blogcontent/${slug}.md?raw`);
         const { data, content } = matter(postFile.default);
-        setPost({ ...data, content } as { content: string; title: string; date: string });
+        setPost({ ...data, content } as { content: string; title: string; date: string; bannerHeader?: string });
       } catch (error) {
         console.error("Error fetching post:", error);
       }
@@ -44,6 +45,11 @@ const BlogPost: React.FC = () => {
 
   return (
     <div className="blog-post-full">
+      {post.bannerHeader && (
+        <div className="blog-banner">
+          <img src={`/resources/${post.bannerHeader}`} alt="Blog Banner" />
+        </div>
+      )}
       <h2>{post.title}</h2>
       <p className="blog-date">{formatDate(post.date)}</p>
       <ReactMarkdown>{post.content}</ReactMarkdown>
