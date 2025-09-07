@@ -9,6 +9,7 @@ interface Post {
   date: string;
   summary: string;
   bannerHeader?: string;
+  bannerSubtext?: string;
 }
 
 const formatDate = (dateString: string): string => {

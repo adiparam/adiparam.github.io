@@ -105,10 +105,7 @@
 /* Blog banner styling */
 .blog-banner {
   position: relative;
-  overflow: hidden;
-  max-height: 600px;
-  height: auto;
-  width: 100%;
+  margin-bottom: 2rem;
 }
 
 .blog-banner img {
@@ -117,6 +114,16 @@
   object-fit: cover;
   border-radius: 1rem 1rem 1rem 1rem;
   display: block;
+}
+
+/* Banner caption styling */
+.banner-caption {
+  position: relative;
+  margin-top: -1rem;
+  font-size: 0.9rem;
+  color: #90caf9;
+  text-align: center;
+  font-style: italic
 }
 
 .blog-post-full h2 {
@@ -130,3 +137,32 @@
   line-height: 1.6;
   margin-bottom: 1rem;
 }
+
+/* Code block styling to resemble terminal window */
+.blog-post-full pre,
+.blog-post pre {
+  position: relative;
+  background: #1e1e1e;
+  color: #f8f8f2;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  padding: 1.5rem 1.5rem 1.5rem;
+  overflow-x: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  font-family: "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+/* Terminal prompt styling */
+.blog-post-full pre code,
+.blog-post pre code {
+  font-family: "Menlo", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
+  white-space: pre;
+  background: transparent;
+  color: #f8f8f2;
+  display: block;
+}
+

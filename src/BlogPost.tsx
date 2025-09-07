@@ -23,14 +23,26 @@ const formatDate = (dateString: string): string => {
 
 const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [post, setPost] = useState<{ content: string; title: string; date: string; bannerHeader?: string } | null>(null);
+  const [post, setPost] = useState<{ 
+    content: string; 
+    title: string; 
+    date: string; 
+    bannerHeader?: string;
+    bannerSubtext?: string;
+  } | null>(null);
 
   useEffect(() => {
     const fetchPost = async () => {
       try {
         const postFile = await import(`../blogcontent/${slug}.md?raw`);
         const { data, content } = matter(postFile.default);
-        setPost({ ...data, content } as { content: string; title: string; date: string; bannerHeader?: string });
+        setPost({ ...data, content } as { 
+          content: string; 
+          title: string; 
+          date: string; 
+          bannerHeader?: string;
+          bannerSubtext?: string;
+        });
       } catch (error) {
         console.error("Error fetching post:", error);
       }
@@ -48,6 +60,11 @@ const BlogPost: React.FC = () => {
       {post.bannerHeader && (
         <div className="blog-banner">
           <img src={`/resources/${post.bannerHeader}`} alt="Blog Banner" />
+          {post.bannerSubtext && (
+            <div className="banner-caption">
+              {post.bannerSubtext}
+            </div>
+          )}
         </div>
       )}
       <h2>{post.title}</h2>
