@@ -2,6 +2,7 @@ import React from 'react'
 import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom'
 import Profile from './Profile'
 import Blog from './Blog'
+import BlogPost from './BlogPost' // Import BlogPost
 import About from './About'
 import Footer from './Footer'
 import AnalyticsTracker from './AnalyticsTracker' // Import the tracker
@@ -31,6 +32,7 @@ const App: React.FC = () => {
           <Routes>
             <Route path="/" element={<Profile />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPost />} /> {/* Add this route */}
             <Route path="/about" element={<About />} />
           </Routes>
         </main>

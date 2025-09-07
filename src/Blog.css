@@ -62,8 +62,107 @@
   margin-bottom: 1rem;
   font-style: italic;
 }
-
+ 
 .blog-post p {
   color: #b0bec5;
   line-height: 1.6;
 }
+
+/* Blog post images styling */
+.blog-post img,
+.blog-post-full img {
+  display: block;
+  margin: 1.5rem auto;
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Blog post full page styling */
+.blog-post-full {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(100, 181, 246, 0.2);
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.blog-post-full::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #64b5f6, #2196f3);
+}
+
+/* Blog banner styling */
+.blog-banner {
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.blog-banner img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 1rem 1rem 1rem 1rem;
+  display: block;
+}
+
+/* Banner caption styling */
+.banner-caption {
+  position: relative;
+  margin-top: -1rem;
+  font-size: 0.9rem;
+  color: #90caf9;
+  text-align: center;
+  font-style: italic
+}
+
+.blog-post-full h2 {
+  color: #64b5f6;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+}
+
+.blog-post-full p {
+  color: #b0bec5;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Code block styling to resemble terminal window */
+.blog-post-full pre,
+.blog-post pre {
+  position: relative;
+  background: #1e1e1e;
+  color: #f8f8f2;
+  border-radius: 8px;
+  margin: 1.5rem 0;
+  padding: 1.5rem 1.5rem 1.5rem;
+  overflow-x: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  font-family: "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 100%;
+}
+
+/* Terminal prompt styling */
+.blog-post-full pre code,
+.blog-post pre code {
+  font-family: "Menlo", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
+  white-space: pre;
+  background: transparent;
+  color: #f8f8f2;
+  display: block;
+}
+
