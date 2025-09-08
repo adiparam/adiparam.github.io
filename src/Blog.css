@@ -50,6 +50,10 @@
   box-shadow: 0 10px 30px rgba(100, 181, 246, 0.1);
 }
 
+.blog-post a {
+  color: #90caf9;
+}
+
 .blog-post h3 {
   color: #64b5f6;
   margin-bottom: 0.5rem;
@@ -100,6 +104,10 @@
   width: 4px;
   height: 100%;
   background: linear-gradient(180deg, #64b5f6, #2196f3);
+}
+
+.blog-post-full a {
+  color: #90caf9;
 }
 
 /* Blog banner styling */
@@ -160,9 +168,46 @@
 .blog-post-full pre code,
 .blog-post pre code {
   font-family: "Menlo", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
-  white-space: pre;
   background: transparent;
   color: #f8f8f2;
   display: block;
+}
+
+/* Unordered list styling for blog posts */
+.blog-post-full ul,
+.blog-post ul {
+  color: #b0bec5;
+  line-height: 1;
+  margin: 1rem 0 1.5rem 1.5rem;
+  list-style-type: none;
+}
+
+.blog-post-full ul li,
+.blog-post ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.blog-post-full ul li::before,
+.blog-post ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #64b5f6;
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+
+/* Style for nested lists */
+.blog-post-full ul ul,
+.blog-post ul ul {
+  margin: 0.75rem 0 0.75rem 1rem;
+}
+
+.blog-post-full ul ul li::before,
+.blog-post ul ul li::before {
+  content: '◦';
+  font-size: 1rem;
 }
 

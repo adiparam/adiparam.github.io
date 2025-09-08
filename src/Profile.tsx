@@ -15,7 +15,7 @@ const Profile: React.FC = () => {
           </div>
           <div className="profile-content">
             <h1>Welcome to my profile</h1>
-            <p>I'm a software engineer at <a href="https://verily.com/">Verily Life Sciences.</a></p>
+            <p>I'm a software engineer with over 20 years of experience developing infrastructure.</p>
           </div>
         </div>
       </div>

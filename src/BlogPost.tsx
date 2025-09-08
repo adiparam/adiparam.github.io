@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import matter from 'gray-matter';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import './Blog.css';
 
 const formatDate = (dateString: string): string => {
@@ -21,28 +23,24 @@ const formatDate = (dateString: string): string => {
   return `${month} ${day}${getOrdinalSuffix(day)} ${year}`;
 };
 
+interface PostData {
+  content: string;
+  title: string;
+  date: string;
+  bannerHeader?: string;
+  bannerSubtext?: string;
+}
+
 const BlogPost: React.FC = () => {
   const { slug } = useParams<{ slug: string }>();
-  const [post, setPost] = useState<{ 
-    content: string; 
-    title: string; 
-    date: string; 
-    bannerHeader?: string;
-    bannerSubtext?: string;
-  } | null>(null);
+  const [post, setPost] = useState<PostData | null>(null);
 
   useEffect(() => {
     const fetchPost = async () => {
       try {
         const postFile = await import(`../blogcontent/${slug}.md?raw`);
         const { data, content } = matter(postFile.default);
-        setPost({ ...data, content } as { 
-          content: string; 
-          title: string; 
-          date: string; 
-          bannerHeader?: string;
-          bannerSubtext?: string;
-        });
+        setPost({ ...data, content } as PostData);
       } catch (error) {
         console.error("Error fetching post:", error);
       }
@@ -69,7 +67,37 @@ const BlogPost: React.FC = () => {
       )}
       <h2>{post.title}</h2>
       <p className="blog-date">{formatDate(post.date)}</p>
-      <ReactMarkdown>{post.content}</ReactMarkdown>
+      <ReactMarkdown
+        components={{
+          code({className, children, ...props}: any) {
+            const match = /language-(\w+)/.exec(className || '');
+            const language = match ? match[1] : '';
+            
+            // Only render SyntaxHighlighter for code blocks (not inline code)
+            if (className) {
+              return (
+                <SyntaxHighlighter
+                  style={vscDarkPlus}
+                  language={language}
+                  PreTag="div"
+                  {...props}
+                >
+                  {String(children).replace(/\n$/, '')}
+                </SyntaxHighlighter>
+              );
+            }
+            
+            // For inline code
+            return (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            );
+          }
+        }}
+      >
+        {post.content}
+      </ReactMarkdown>
     </div>
   );
 };

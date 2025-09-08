@@ -8,7 +8,7 @@ bannerSubtext: "Created using Nano Banana"
 
 I have been a vibe-coding sceptic for a while now but I created a large portion of this website using LLMs and so this seems as good a topic as any to kick things off.
 
-My first real foray with the agent mode in Copilot involved Workflow Identity Federation in Java which didn't really end well but that's a story for another day. Suffice to say all three models I tried (Sonnet 3.7, Gemini 2.5 Flash, o3-mini) ended up hallucinating key functions that were non-existant and I eventually had to figure it out by reading *shudder* documentation.
+My first real foray with the agent mode in Copilot involved Workflow Identity Federation in Java which didn't really end well but that's a story for another day. Suffice to say all three models I tried (Sonnet 3.7, Gemini 2.5 Flash, o3-mini) ended up hallucinating key functions that were non-existant and I eventually had to figure it out by *(shudder)* reading documentation.
 
 But here's the rub - I was already quite familiar with the tech I was working with so I knew what exactly to Google, and whether the results pass the smell test. It seemed to me that coding agents may not be the best option while navigating a complex codebase and making changes -  especially if you're familiar with both the technology and the codebase. 
 
@@ -33,7 +33,7 @@ I made some decisions before prompting: React and Vite and hosting this on Githu
 
 The first change I had to make was the navigation didn't quite work when deployed to Github pages. Apparently it's a [known issue](https://create-react-app.dev/docs/deployment/#serving-apps-with-client-side-routing) and using a HashRouter is one option. So for this I decided to use Google's Jules coding agent and prompted it to switch to use the HashRouter. This is what it [came up](https://github.com/adiparam/adiparam.github.io/pull/6/commits/71374b70cc375996ee9cde514a8b9ea07b3be87e) with:
 
-```
+```js
 - import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
 + import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom'
 ```
