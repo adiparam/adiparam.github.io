@@ -15,7 +15,7 @@ const About: React.FC = () => {
                 </div>
                 <p>I architected and led the development of the primary clinical workflow on GCP using GKE microservices,
                   enabling the launch of the 
-                  <a href="https://verily.com/solutions/numetric/retinal-service"> Verily Numetric Retinal Service </a>
+                  <a href="https://web.archive.org/web/verily.com/solutions/numetric/retinal-service"> Verily Numetric Retinal Service </a>
                   from concept to production. I built an 
                   <a href="https://www.accessdata.fda.gov/scripts/cdrh/cfdocs/cfRL/rl.cfm?lid=800483&lpcd=OUG"> image
                    storage and retrieval solution </a> called SID which has been approved by the FDA as a 
