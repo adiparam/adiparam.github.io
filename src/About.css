@@ -1,76 +1,84 @@
 /* Work Experience */
 .about-section {
   margin-bottom: 4rem;
-}
 
-.about-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  text-align: center;
-  color: #64b5f6;
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    color: #64b5f6;
+  }
 }
 
 .experience-list {
   display: block; /* Override grid display */
-  background: rgba(0, 0, 0, 0.2); /* Apply box styling to the container */
+  background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
   border: 1px solid rgba(100, 181, 246, 0.2);
   border-radius: 1rem;
-  padding: 2rem; /* Padding for the single box */
-}
+  padding: 2rem;
 
-.experience-list .experience-item {
-  background: none;
-  backdrop-filter: none;
-  border: none;
-  padding: 0; /* Remove padding, rely on margins or container padding */
-  margin-bottom: 1.5rem; /* Add some space between items within the box */
-  position: relative; /* Keep for ::before if still desired, or remove */
-  overflow: visible; /* Adjust if ::before was causing issues */
-}
+  /* Keep ::before for the main single-box container instead of individual items */
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #64b5f6, #2196f3);
+    border-radius: 1rem 0 0 1rem; /* Adjust to match container's border-radius */
+  }
 
-.experience-list .experience-item:last-child {
-  margin-bottom: 0; /* No margin for the last item */
-}
+  .experience-item {
+    background: none;
+    backdrop-filter: none;
+    border: none;
+    padding: 0; /* Remove padding, rely on margins or container padding */
+    margin-bottom: 1.5rem; /* Add some space between items within the box */
+    position: relative; /* Keep for ::before if still desired, or remove */
+    overflow: visible; /* Adjust if ::before was causing issues */
 
-/* Keep ::before for the main single-box container instead of individual items */
-.experience-list::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, #64b5f6, #2196f3);
-  border-radius: 1rem 0 0 1rem; /* Adjust to match container's border-radius */
-}
+    &:last-child {
+      margin-bottom: 0; /* No margin for the last item */
+    }
 
-.experience-list .experience-item::before {
-  display: none; /* Hide ::before for individual items inside single-box */
-}
-
-.experience-list .experience-item:hover {
-  /* Adjust hover effects if needed, or remove if they don't make sense for items within a box */
-  transform: none;
-  border-color: none;
-  box-shadow: none;
+    &::before {
+      display: none; /* Hide ::before for individual items inside single-box */
+    }
+  }
 }
 
 hr.experience-separator {
   border: none;
   height: 1px;
-  background-color: rgba(100, 181, 246, 0.2);
+  background-color: rgba(100, 181, 246, 0.5);
   margin: 1.5rem 0;
 }
 
-.experience-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, #64b5f6, #2196f3);
+.experience-item {
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, #64b5f6, #2196f3);
+  }
+  p {
+    color: #b0bec5;
+    line-height: 1.6;
+  }
+  a {
+    color: #64b5f6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+    &:visited {
+      color: #90caf9;
+    }
+  }
 }
 
 .experience-header {
@@ -80,12 +88,12 @@ hr.experience-separator {
   margin-bottom: 1rem;
   flex-wrap: wrap;
   gap: 1rem;
-}
 
-.experience-header h3 {
-  font-size: 1.5rem;
-  color: white;
-  margin: 0;
+  h3 {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+  }
 }
 
 .period {
@@ -95,20 +103,4 @@ hr.experience-separator {
   border-radius: 2rem;
   font-size: 0.9rem;
   font-weight: 500;
-}
-
-.experience-item p {
-  color: #b0bec5;
-  line-height: 1.6;
-}
-
-.experience-item a {
-  color: #64b5f6;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  position: relative;
-}
-
-.experience-item a:visited {
-  color: #90caf9;
 }
