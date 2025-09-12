@@ -1,19 +1,22 @@
-
+:root {
+  --primary-color: #64b5f6;
+  --box-shadow-color: rgba(100, 181, 246, 0.2);
+}
 /* Blog Section */
 .blog-section {
   text-align: center;
   padding: 4rem 0;
-}
 
-.blog-section h2 {
-  font-size: 2.5rem;
-  margin-bottom: 2rem;
-  color: #64b5f6;
-}
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+  }
 
-.blog-section p {
-  font-size: 1.2rem;
-  color: #b0bec5;
+  p {
+    font-size: 1.2rem;
+    color: #b0bec5;
+  }
 }
 
 /* Blog Section Styles */
@@ -25,39 +28,44 @@
 .blog-post {
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(100, 181, 246, 0.2);
+  border: 1px solid var(--box-shadow-color);
   border-radius: 1rem;
   padding: 2rem;
   margin-bottom: 2rem;
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
-}
 
-.blog-post::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, #64b5f6, #2196f3);
-}
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary-color), #2196f3);
+  }
 
-.blog-post:hover {
-  transform: translateY(-5px);
-  border-color: rgba(100, 181, 246, 0.4);
-  box-shadow: 0 10px 30px rgba(100, 181, 246, 0.2);
-}
+  &:hover {
+    transform: translateY(-5px);
+    border-color: var(--box-shadow-color);
+    box-shadow: 0 10px 30px var(--box-shadow-color);
+  }
+  a {
+    color: #90caf9;
+    text-decoration: none;
+  }
 
-.blog-post a {
-  color: #90caf9;
-}
+  h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+  }
+  p {
+    color: #b0bec5;
+    line-height: 1.6;
+  }
 
-.blog-post h3 {
-  color: #64b5f6;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
 }
 
 .blog-date {
@@ -67,11 +75,6 @@
   font-style: italic;
 }
  
-.blog-post p {
-  color: #b0bec5;
-  line-height: 1.6;
-}
-
 /* Blog post images styling */
 .blog-post img,
 .blog-post-full img {
@@ -90,38 +93,46 @@
   padding: 2rem;
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(100, 181, 246, 0.2);
+  border: 1px solid var(--box-shadow-color);
   border-radius: 1rem;
   position: relative;
   overflow: hidden;
-}
 
-.blog-post-full::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 4px;
-  height: 100%;
-  background: linear-gradient(180deg, #64b5f6, #2196f3);
-}
-
-.blog-post-full a {
-  color: #90caf9;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--primary-color), #2196f3);
+  }
+  a {
+    color: #90caf9;
+  }
+  h2 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+   p {
+    color: #b0bec5;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
 }
 
 /* Blog banner styling */
 .blog-banner {
   position: relative;
   margin-bottom: 2rem;
-}
-
-.blog-banner img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 1rem 1rem 1rem 1rem;
-  display: block;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 1rem 1rem 1rem 1rem;
+    display: block;
+  }
 }
 
 /* Banner caption styling */
@@ -132,18 +143,6 @@
   color: #90caf9;
   text-align: center;
   font-style: italic
-}
-
-.blog-post-full h2 {
-  color: #64b5f6;
-  margin-bottom: 0.5rem;
-  font-size: 2rem;
-}
-
-.blog-post-full p {
-  color: #b0bec5;
-  line-height: 1.6;
-  margin-bottom: 1rem;
 }
 
 /* Code block styling to resemble terminal window */
@@ -162,15 +161,12 @@
   line-height: 1.6;
   border: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
-}
-
-/* Terminal prompt styling */
-.blog-post-full pre code,
-.blog-post pre code {
-  font-family: "Menlo", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
-  background: transparent;
-  color: #f8f8f2;
-  display: block;
+  code {
+    font-family: "Menlo", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
+    background: transparent;
+    color: #f8f8f2;
+    display: block;
+  }
 }
 
 /* Unordered list styling for blog posts */
@@ -180,34 +176,24 @@
   line-height: 1;
   margin: 1rem 0 1.5rem 1.5rem;
   list-style-type: none;
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    margin-bottom: 0.75rem;
+    &::before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: var(--primary-color);
+      font-size: 1.2rem;
+      line-height: 1.4;
+    }
+  }
+  ul {
+    margin: 0.75rem 0 0.75rem 1rem;
+    li::before {
+      content: '◦';
+      font-size: 1rem;
+    }
+  }
 }
-
-.blog-post-full ul li,
-.blog-post ul li {
-  position: relative;
-  padding-left: 1.5rem;
-  margin-bottom: 0.75rem;
-}
-
-.blog-post-full ul li::before,
-.blog-post ul li::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: #64b5f6;
-  font-size: 1.2rem;
-  line-height: 1.4;
-}
-
-/* Style for nested lists */
-.blog-post-full ul ul,
-.blog-post ul ul {
-  margin: 0.75rem 0 0.75rem 1rem;
-}
-
-.blog-post-full ul ul li::before,
-.blog-post ul ul li::before {
-  content: '◦';
-  font-size: 1rem;
-}
-
