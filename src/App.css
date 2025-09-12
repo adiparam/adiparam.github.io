@@ -51,28 +51,25 @@
   position: relative;
   text-decoration: none;
   display: inline-block;
-}
-
-.nav-item:hover {
-  background: rgba(100, 181, 246, 0.2);
-  transform: translateY(-2px);
-}
-
-.nav-item.active {
-  background: rgba(100, 181, 246, 0.3);
-  color: #64b5f6;
-}
-
-.nav-item.active::after {
-  content: '';
-  position: absolute;
-  bottom: -0.5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 20px;
-  height: 2px;
-  background: #64b5f6;
-  border-radius: 1px;
+  &:hover {
+    background: rgba(100, 181, 246, 0.2);
+    transform: translateY(-2px);
+  }
+  .active {
+    background: rgba(100, 181, 246, 0.3);
+    color: #64b5f6;
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 20px;
+      height: 2px;
+      background: #64b5f6;
+      border-radius: 1px;
+    }
+  }
 }
 
 /* Main Content */
@@ -89,22 +86,21 @@
   text-align: center;
   padding: 4rem 0;
   margin-bottom: 4rem;
-}
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(45deg, #64b5f6, #90caf9, #e3f2fd);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 0 0 30px rgba(100, 181, 246, 0.3);
+  }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  background: linear-gradient(45deg, #64b5f6, #90caf9, #e3f2fd);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 30px rgba(100, 181, 246, 0.3);
-}
-
-.hero p {
-  font-size: 1.2rem;
-  color: #b0bec5;
-  margin-top: 1rem;
+  p {
+    font-size: 1.2rem;
+    color: #b0bec5;
+    margin-top: 1rem;
+  }
 }
 
 /* Footer */
@@ -136,13 +132,13 @@
   border-radius: 2rem;
   transition: all 0.3s ease;
   font-weight: 500;
-}
 
-.social-link:hover {
-  background: rgba(100, 181, 246, 0.2);
-  border-color: rgba(100, 181, 246, 0.5);
-  transform: translateY(-3px);
-  box-shadow: 0 5px 15px rgba(100, 181, 246, 0.2);
+  &:hover {
+    background: rgba(100, 181, 246, 0.2);
+    border-color: rgba(100, 181, 246, 0.5);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(100, 181, 246, 0.2);
+  }
 }
 
 .social-icon {
@@ -186,10 +182,9 @@
   .experience-header {
     flex-direction: column;
     align-items: flex-start;
-  }
-
-  .experience-header h3 {
-    font-size: 1.3rem;
+    h3 {
+      font-size: 1.3rem;
+    }
   }
 
   .social-links {

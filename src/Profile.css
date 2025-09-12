@@ -19,27 +19,24 @@
   border: 4px solid #64b5f6;
   box-shadow: 0 8px 32px rgba(100, 181, 246, 0.3);
   transition: all 0.3s ease;
-}
-
-.profile-image:hover {
-  transform: scale(1.05);
-  box-shadow: 0 12px 40px rgba(100, 181, 246, 0.5);
-  border-color: #90caf9;
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 40px rgba(100, 181, 246, 0.5);
+    border-color: #90caf9;
+  }
 }
 
 .profile-content {
   flex: 1;
   text-align: left;
-}
-
-.profile-content h1 {
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-}
-
-.profile-content p {
-  font-size: 1.2rem;
-  margin-bottom: 0;
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+  }
 }
 
 /* Responsive Design */
@@ -52,19 +49,17 @@
   
   .profile-content {
     text-align: center;
+    h1 {
+      font-size: 2rem;
+    }
+    p {
+      font-size: 1rem;
+    }
   }
   
   .profile-image {
     width: 150px;
     height: 150px;
-  }
-  
-  .profile-content h1 {
-    font-size: 2rem;
-  }
-  
-  .profile-content p {
-    font-size: 1rem;
   }
 }
 
@@ -89,35 +84,30 @@
   text-decoration: none;
   transition: all 0.3s ease;
   position: relative;
-}
-
-.hero a:visited {
-  color: #90caf9;
-}
-
-.hero a:hover {
-  color: #e3f2fd;
-  text-shadow: 0 0 8px rgba(100, 181, 246, 0.5);
-}
-
-.hero a:focus {
-  outline: 2px solid rgba(100, 181, 246, 0.5);
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-
-/* Optional underline effect on hover */
-.hero a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background: linear-gradient(90deg, #64b5f6, #90caf9);
-  transition: width 0.3s ease;
-}
-
-.hero a:hover::after {
-  width: 100%;
+  &:visited {
+    color: #90caf9;
+  }
+  &:hover {
+    color: #e3f2fd;
+    text-shadow: 0 0 8px rgba(100, 181, 246, 0.5);
+    &::after {
+      width: 100%;
+    }
+  }
+  &:focus {
+    outline: 2px solid rgba(100, 181, 246, 0.5);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  /* Optional underline effect on hover */
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, #64b5f6, #90caf9);
+    transition: width 0.3s ease;
+  }
 }
