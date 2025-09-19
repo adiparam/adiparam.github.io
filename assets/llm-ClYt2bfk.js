@@ -14,7 +14,7 @@ But here's the rub - I was already quite familiar with the tech I was working wi
 
 Being an infrastructure engineer for the past several years, I'm not very familiar with Typescript and even less with CSS and I've got to say I'm slowly coming around. I started off with a simple prompt to Copilot in Agent mode:
 
-\`\`\`
+\`\`\`text
 Create a personal profile page for Aditya Paramatmuni using react and vite.
 Make the page use a dark background with a blue to black gradiant.
 Make a navigation bar at the top with two sections: Home and Blog.
@@ -45,15 +45,15 @@ I guess anyone familiar with this stuff would have known this is a drop-in repla
 The final piece for now was to support blog posts and here I decided to use markdown files as a headless CMS and asked Copilot to make the changes. This time it was not quite as successful but it was very close. One thing I like about Copilot agent mode is it pauses and waits for confirmation whenever it has to run a terminal command (like installing npm packages). It spent a few minutes and gave up after running into errors which I ended up fixing without much trouble.
 
 So in conclusion I do plan to use coding agents especially if a combination of these hold true:
- - I'm not very familiar with the tech stack in question
- - I'm creating something from scratch instead of modifying a complex system
- - The stakes are low
+
+- I'm not very familiar with the tech stack in question
+- I'm creating something from scratch instead of modifying a complex system
+- The stakes are low
 
 On a related note, the image generation tools are fantastic. [Nano banana](https://gemini.google/overview/image-generation/) was released recently and when opened it suggested this prompt that I figured is a great fit for this post:
 
-\`\`\`
+\`\`\`text
 Create a beautiful image of the phrase "Vibe Coding" made from 
 exploding pastel paint underwater, pastel background
 \`\`\`
-
 `;export{e as default};
