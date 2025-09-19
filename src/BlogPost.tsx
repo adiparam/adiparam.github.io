@@ -4,9 +4,11 @@ import ReactMarkdown from 'react-markdown';
 import matter from 'gray-matter';
 import { PrismLight as SyntaxHighlighter } from 'react-syntax-highlighter';
 import jsx from 'react-syntax-highlighter/dist/esm/languages/prism/javascript';
+import go from 'react-syntax-highlighter/dist/esm/languages/prism/go';
 import { vscDarkPlus } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 SyntaxHighlighter.registerLanguage('jsx', jsx);
+SyntaxHighlighter.registerLanguage('go', go);
 
 import './Blog.css';
 
